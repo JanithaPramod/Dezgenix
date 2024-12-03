@@ -70,101 +70,115 @@ header a{
 .card{
 
     width: 350px;
-    /* height: 950px; */
-    background-color: #121C2B;
-    border: 5px solid #1E1E2C;
-    box-shadow: 0 0 20px black;
-    border-radius: 10px;
-    padding: 30px;
+    height: 830px;
+    overflow: hidden;
+    border: 3px solid #2D9CDB;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.406);
+    border-radius: 20px;
+    cursor: pointer;
     transition: all 0.5s ease-in-out;
 
 }
 
 .card:hover{
 
-    transform: scale(1.05)translateY(-20px);
+    transform: scale(1.05)translateY(-10px);
+    box-shadow: 0 0 15px #2D9CDB;
 
 }
 
-.card-img{
+.card-img i{
 
-    border: 5px solid white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    border-radius: 20px;
-    font-size: 150px;
-
-}
-
-.card-content{
-
-    margin-top: 15px;
+    margin-top: 20px;
+    font-size: 60px;
+    border: 3px solid white;
+    padding: 15px;
+    border-radius: 50%;
 
 }
 
 .card-content h2{
 
-    font-size: 30px;
+    margin-top: 20px;
 
 }
 
 .card-content p{
 
     font-size: 18px;
-    text-align: center;
 
 }
 
-.our{
+.card-content h4{
 
-    color: white;
+    font-size: 22px;
     margin-top: 10px;
-    font-size: 20px;
+    color: #6C63FF;
+    font-weight: bold;
 
 }
 
-ul{
+.card-content ul{
 
-    margin-top: 15px;
-
-}
-
-ul li{
-
-    color: white;
-    font-size: 15px;
+    text-align: start;
+    padding: 15px;
+    color: #2D9CDB;
+    font-weight: bold;
     font-family: "Host Grotesk", sans-serif;
+    font-size: 17px;
 
 }
 
 .bottom{
 
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 
 }
 
 .card-content a{
 
-   text-decoration: none;
-   color: aliceblue;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   font-family: "Host Grotesk", sans-serif;
-   font-size: 20px;
-   background-color: #2D9CDB;
-   padding: 10px;
-   border-radius: 10px;
-   box-shadow: 0 0 20px #2D9CDB;
-   transition: all 0.5s ease-in-out;
+    text-decoration: none;
+    margin-top: 20px;
+    font-family: "Host Grotesk", sans-serif;
+    font-size: 22px;
+    color: #2D9CDB;
+    border: 3px solid #2D9CDB;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+
+}
+
+.card-content a::before{
+
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #2D9CDB;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 1s ease-in-out;
 
 }
 
 .card-content a:hover{
 
-    transform: scale(1.1);
+    box-shadow: 0 0 15px #2D9CDB;
+    color: black;
+
+}
+
+.card-content a:hover::before{
+
+    opacity: 100%;
 
 }
 
